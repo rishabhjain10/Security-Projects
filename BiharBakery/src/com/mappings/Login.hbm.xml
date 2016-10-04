@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.beans.Login" table="bakerylogin">
+          <id name="userId" column="userid">
+  		</id>
+   
+    <property name="password" column="password" />
+      <property name="userName" column="username" />
+        <property name="role" column="role" />
+  
+    </class>
+    
+    
+    
+    <class name="com.beans.Registration" table="bakeryRegistration1">
+          <id name="userId" column="userId">
+   </id>
+   
+    <property name="password" column="password" />
+  	<property name="customerName" column="customerName" />
+  	<property name="mobileNumber" column="mobileNumber" />
+  	<property name="emailId" column="emailId" />
+  	<property name="address" column="address" />
+   </class>
+   
+   
+   
+   
+   
+   
+   
+   <class name="com.beans.ItemsList" table="itemslist">
+          <id name="itemId" column="item_id">
+   </id>
+   <property name="itemName" column="item_name" />
+    <property name="itemType" column="item_type" />
+    <property name="quantity" column="item_quantity" />
+  	<property name="itemCost" column="item_cost" />
+  	
+   </class>
+   
+   
+   
+   
+   
+   <class name="com.beans.MakeOrder" table="makeorder1">
+   
+          <id name="orderid" column="orderid">
+   </id>
+   <property name="userid" column="userid" />
+    <property name="item" column="item_name" />
+    <property name="quantity" column="item_quantity" />
+  	<property name="cost" column="item_cost" />
+  	<property name="itemid" column="itemid" />
+  	<property name="totalcost" column="totalcost" />
+  	<property name="orderstatus" column="orderstatus" />
+   </class>
+   
+   
+   
+   
+    
+    
+</hibernate-mapping>
+
