@@ -1,0 +1,150 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+     <style>
+        body {
+ 
+margin:80px 80px 100px 100px;
+}
+a{color:orange
+}
+
+
+
+div#fixedheader {
+position:fixed;
+top:0px;
+left:0px;
+width:100%;
+background:maroon;
+padding:20px;
+ }
+
+div#fixedfooter {
+position:fixed;
+bottom:0px;
+left:0px;
+width:100%;
+color:orange;
+background:maroon;
+padding:8px;
+}
+        form{
+           font-size: 200%;
+        }
+    </style>
+    <div id="fixedheader">
+        
+<p align="right" >
+    
+<a href="mailto:ttdseva@gmail.com" style="text-decoration:none">Write to us |</a> 
+<a href="contactframe.html"  style="text-decoration:none">Contact Us</a>
+
+</p></div>
+
+
+
+<div id="fixedfooter">
+<a href="tcframe.html" target="_top" style="text-decoration:none">Terms & Conditions</a>
+<p style="color:orange  align=left"> © Copyright 2015.Tirumala Tirupati Devasthanams</p>
+
+</div>
+<body>
+
+<center><h1 style="color: orange"> Registration page </h1></p></center>
+
+<script type="text/javascript">
+
+  function checkForm(form)
+  {
+    if(form.username.value == "") {
+      alert("Error: Username cannot be blank!");
+      form.username.focus();
+      return false;
+    }
+	if(form.email.value == "") {
+      alert("Error: Email cannot be blank!");
+      form.email.focus();
+      return false;
+    }
+	if(form.country.value == "") {
+      alert("Error: Country cannot be blank!");
+      form.country.focus();
+      return false;
+    }
+	if(form.city.value == "") {
+      alert("Error: City cannot be blank!");
+      form.city.focus();
+      return false;
+    }
+	if(form.phoneno.value == "") {
+      alert("Error: Phone No cannot be blank!");
+      form.phoneno.focus();
+      return false;
+    }
+    re = /^\w+$/;
+    if(!re.test(form.username.value)) {
+      alert("Error: Username must contain only letters, numbers and underscores!");
+      form.username.focus();
+      return false;
+    }
+
+    if(form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+      if(form.pwd1.value.length < 6) {
+        alert("Error: Password must contain at least six characters!");
+        form.pwd1.focus();
+        return false;
+      }
+      if(form.pwd1.value == form.username.value) {
+        alert("Error: Password must be different from Username!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[0-9]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one number (0-9)!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[a-z]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one lowercase letter (a-z)!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        form.pwd1.focus();
+        return false;
+      }
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.pwd1.focus();
+      return false;
+    }
+
+    alert("You have successfully registered " );
+    return true;
+  }
+
+</script>
+<style>
+p{
+font-family:verdana;
+}
+</style>
+
+<!-- <div style="color:blue ; background-color:orange ; padding:5px;top: 0;left: 0;width: 50%;height: 50%;"> -->
+<center><form ... onsubmit="return checkForm(this);">
+<pre><p><sup>*</sup>Username:	<input type="text" name="username"></p><p>Date of birth:	<input type="text" name="dob"></p><p>Email id:		<input type="text" name="email"></p><p>Phone No:		<input type="text" name="phoneno"></p><p>Country:		<input type="text" name="country"></p><p>City:		<input type="text" name="city"></p><p>Address1:		<input type="text" name="address1"></p><p>Address2:		<input type="text" name="address2"></p><p><sup>*</sup>Password:	<input type="password" name="pwd1"></p><p><sup>*</sup>Confirm Password:<input type="password" name="pwd2"></p><p>Title:<select><option value="Mr">Mr</option><option value="Ms">Ms</option><option value="Mrs">Mrs</option></select>
+
+<input type="submit" position="center">
+</pre></form></center>
+
+</div>
+</body>
+</html>

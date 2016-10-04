@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.ttdonline.controllers.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ViewrequestServlet</servlet-name>
+        <servlet-class>com.ttdonline.controllers.ViewrequestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewrequestServlet</servlet-name>
+        <url-pattern>/vrs</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>GetApprovedRequest</servlet-name>
+        <servlet-class>com.ttdonline.controllers.GetApprovedRequest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetApprovedRequest</servlet-name>
+        <url-pattern>/gar</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>GetSevaServletForCheck</servlet-name>
+        <servlet-class>com.ttdonline.controllers.GetSevaServletForCheck</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetSevaServletForCheck</servlet-name>
+        <url-pattern>/gssfc</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>GetPendingTickets</servlet-name>
+        <servlet-class>com.ttdonline.controllers.GetPendingTickets</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetPendingTickets</servlet-name>
+        <url-pattern>/gpt</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CheckServlet</servlet-name>
+        <servlet-class>com.ttdonline.controllers.CheckServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckServlet</servlet-name>
+        <url-pattern>/cas</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CheckServletForBooking</servlet-name>
+        <servlet-class>com.ttdonline.controllers.CheckServletForBooking</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckServletForBooking</servlet-name>
+        <url-pattern>/casb</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>DevoteeServlet</servlet-name>
+        <servlet-class>com.ttdonline.controllers.DevoteeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DevoteeServlet</servlet-name>
+        <url-pattern>/devotee</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    <servlet-name>BookTicketServlet</servlet-name>
+    <servlet-class>com.ttdonline.controllers.BookTicketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookTicketServlet</servlet-name>
+        <url-pattern>/bts</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>GetSevaServletForBooking</servlet-name>
+        <servlet-class>com.ttdonline.controllers.GetSevaServletForBooking</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetSevaServletForBooking</servlet-name>
+        <url-pattern>/gssfb</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ViewStatus</servlet-name>
+        <servlet-class>com.ttdonline.controllers.ViewStatus</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewStatus</servlet-name>
+        <url-pattern>/vs</url-pattern>
+    </servlet-mapping>
+    
+    <welcome-file-list>
+        <welcome-file>Login.html</welcome-file>
+    </welcome-file-list>
+</web-app>
